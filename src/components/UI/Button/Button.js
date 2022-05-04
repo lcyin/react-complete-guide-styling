@@ -1,7 +1,11 @@
-import styled from 'styled-components';
+import React from 'react';
+// Using CSS modules
+import styles from './Button.module.css';
+// Class name become Button_button_xyz <COMPONETNS_CLASSNAME_RAMDAM-HASH>
+/* import styled from 'styled-components';
 
 // props will forward by styled components package to build in button
-const Button = styled.button`
+ const Button = styled.button`
   width: 100%;
   font: inherit;
   padding: 0.5rem 1.5rem;
@@ -28,13 +32,14 @@ const Button = styled.button`
   }
 
 `;
-
-// const Button = (props) => {
-//   return (
-//     <button type={props.type} className="button" onClick={props.onClick}>
-//       {props.children}
-//     </button>
-//   );
-// };
+*/
+const Button = (props) => {
+  return (
+    <button type={props.type} className={styles.button} onClick={props.onClick}>
+      {' '}
+      {props.children}
+    </button>
+  );
+};
 
 export default Button;
